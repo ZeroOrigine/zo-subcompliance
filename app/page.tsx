@@ -1,4 +1,4 @@
-// CANONICAL: SubCompliance marketing landing page — single source of truth for the home route (/).
+// CANONICAL: SubCompliance marketing landing page: single source of truth for the home route (/).
 // SELF-VALIDATION FIX: JSON-LD offers and FAQ copy previously referenced $29/$99 tiers that don't
 // exist; reminder copy now matches the real default schedule (30/14/7/1, customizable).
 // Server Component. All marketing sections are inline; only shared nav/pricing/footer are imported.
@@ -10,9 +10,9 @@ import SiteFooter from '@/components/marketing/site-footer'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
-  title: 'SubCompliance — Never Get Pulled Off a Job for a Lapsed COI',
+  title: 'SubCompliance | Never Get Pulled Off a Job for a Lapsed COI',
   description:
-    'SubCompliance tracks the insurance and compliance requirements every general contractor puts on you — COIs, endorsements, licenses — warns you weeks before anything expires, and drafts the broker request that keeps you on the job. Free for your first 3 GCs.',
+    'SubCompliance tracks the insurance and compliance requirements every general contractor puts on you (COIs, endorsements, licenses), warns you weeks before anything expires, and drafts the broker request that keeps you on the job. Free for your first 3 GCs.',
   keywords: [
     'certificate of insurance tracker',
     'COI tracking for subcontractors',
@@ -22,16 +22,16 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'SubCompliance — Never get pulled off a job for a lapsed COI',
+    title: 'SubCompliance | Never get pulled off a job for a lapsed COI',
     description:
-      'COI and compliance tracking built for the contractor being tracked — not the GC doing the tracking. Free for your first 3 GCs, no credit card required.',
+      'COI and compliance tracking built for the contractor being tracked, not the GC doing the tracking. Free for your first 3 GCs, no credit card required.',
     url: '/',
     siteName: 'SubCompliance',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'SubCompliance — COI & compliance tracking for trade contractors',
+    title: 'SubCompliance | COI & compliance tracking for trade contractors',
     description:
       'Track every GC’s requirements, get warned before anything lapses, and send the broker request in one click.',
   },
@@ -87,19 +87,19 @@ const FEATURES = [
   {
     title: 'Early-warning reminders',
     description:
-      'Alerts at 30, 14, 7, and 1 day before any certificate, endorsement, or license expires — long before the GC’s compliance office notices. Timing is fully customizable.',
+      'Alerts at 30, 14, 7, and 1 day before any certificate, endorsement, or license expires, long before the GC’s compliance office notices. Timing is fully customizable.',
     icon: 'M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0',
   },
   {
     title: 'Broker requests, drafted',
     description:
-      'One click turns a looming expiration into a renewal request with the GC’s exact requirements — limits, additional insureds, endorsements — ready to send to your broker.',
+      'One click turns a looming expiration into a renewal request with the GC’s exact requirements (limits, additional insureds, endorsements), ready to send to your broker.',
     icon: 'M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5',
   },
   {
     title: 'Per-GC requirement checklists',
     description:
-      'GL limits, waivers of subrogation, W-9s, licenses — tracked item by item, per relationship, so “compliant” always means what that GC says it means.',
+      'GL limits, waivers of subrogation, W-9s, licenses: tracked item by item, per relationship, so “compliant” always means what that GC says it means.',
     icon: 'M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
   },
   {
@@ -111,7 +111,7 @@ const FEATURES = [
   {
     title: 'Your documents, on hand',
     description:
-      'Keep current copies of every certificate in one place — when a GC asks for proof, it’s one tap away instead of a call to your broker.',
+      'Keep current copies of every certificate in one place. When a GC asks for proof, it’s one tap away instead of a call to your broker.',
     icon: 'M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z',
   },
 ]
@@ -121,13 +121,13 @@ const STEPS = [
     number: '1',
     title: 'Add your GCs',
     description:
-      'List each general contractor you work under and what they require — COI limits, endorsements, W-9s, licenses. About a minute per GC.',
+      'List each general contractor you work under and what they require: COI limits, endorsements, W-9s, licenses. About a minute per GC.',
   },
   {
     number: '2',
     title: 'We watch every date',
     description:
-      'SubCompliance tracks every expiration across every relationship and warns you 30, 14, 7, and 1 day out — before anyone else notices.',
+      'SubCompliance tracks every expiration across every relationship and warns you 30, 14, 7, and 1 day out, before anyone else notices.',
   },
   {
     number: '3',
@@ -142,17 +142,17 @@ const SCENARIOS = [
     label: 'The Friday-deadline email',
     quote: '“Send an updated COI by end of day Friday or you’re off next week’s schedule.”',
     answer:
-      'SubCompliance warns you 30, 14, 7, and 1 day before every expiration — so the renewal is handled before the compliance office ever writes that email.',
+      'SubCompliance warns you 30, 14, 7, and 1 day before every expiration, so the renewal is handled before the compliance office ever writes that email.',
   },
   {
     label: 'The requirements maze',
     quote: '“Every GC wants different limits, different additional insureds, different endorsements.”',
     answer:
-      'Each GC relationship gets its own requirement checklist. You always know exactly what “compliant” means — for that GC, on that job.',
+      'Each GC relationship gets its own requirement checklist. You always know exactly what “compliant” means for that GC, on that job.',
   },
   {
     label: 'The broker back-and-forth',
-    quote: '“I know my policy renews soon — I just never remember what each GC needs on the cert.”',
+    quote: '“I know my policy renews soon. I just never remember what each GC needs on the cert.”',
     answer:
       'One click drafts the broker request with the exact requirements for that GC: limits, endorsements, certificate holder details. Forward it and get back to work.',
   },
@@ -162,32 +162,32 @@ const FAQS = [
   {
     question: 'Is the free plan actually useful, or just a demo?',
     answer:
-      'It’s the real product. You get 3 GC relationships, unlimited documents and expiration dates, the full reminder system (30, 14, 7, and 1 day out by default — customizable), and broker request drafts — free forever, no credit card. If you work under three or fewer GCs, you may never need to pay us.',
+      'It’s the real product. You get 3 GC relationships, unlimited documents and expiration dates, the full reminder system (30, 14, 7, and 1 day out by default, customizable), and broker request drafts. Free forever, no credit card. If you work under three or fewer GCs, you may never need to pay us.',
   },
   {
     question: 'What counts as a “GC relationship”?',
     answer:
-      'Any company you have to stay compliant for — a general contractor, construction manager, or property manager. Each relationship gets its own requirement checklist, documents, and expiration dates, because every GC asks for something different.',
+      'Any company you have to stay compliant for: a general contractor, construction manager, or property manager. Each relationship gets its own requirement checklist, documents, and expiration dates, because every GC asks for something different.',
   },
   {
     question: 'Does SubCompliance replace my insurance broker?',
     answer:
-      'No — it makes working with your broker faster. When a renewal is coming, SubCompliance drafts the request with the exact requirements for that GC — limits, endorsements, certificate holder details — so your broker gets everything right the first time. It works with any broker or carrier.',
+      'No. It makes working with your broker faster. When a renewal is coming, SubCompliance drafts the request with the exact requirements for that GC (limits, endorsements, certificate holder details) so your broker gets everything right the first time. It works with any broker or carrier.',
   },
   {
     question: 'Is my insurance information secure?',
     answer:
-      'Yes. Your documents are stored encrypted and isolated to your account with row-level security — nobody else can see them, and we never share or sell your data.',
+      'Yes. Your documents are stored encrypted and isolated to your account with row-level security. Your files stay yours, and we never share or sell your data.',
   },
   {
     question: 'Can I export my documents and data?',
     answer:
-      'Anytime. Your certificates and compliance records are yours — download your files whenever you want. No lock-in, ever.',
+      'Anytime. Your certificates and compliance records are yours: download your files whenever you want. No lock-in, ever.',
   },
   {
     question: 'What if I need help getting set up?',
     answer:
-      'Email support is included on every plan, and Pro gets priority responses. Setup is designed to take minutes — add a GC, list what they require, done.',
+      'Email support is included on every plan, and Pro gets priority responses. Setup is designed to take minutes: add a GC, list what they require, done.',
   },
 ]
 
@@ -228,7 +228,7 @@ export default function HomePage() {
             <div className='sc-fade-up'>
               <p className='inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-800 dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-300'>
                 <span aria-hidden='true' className='h-1.5 w-1.5 rounded-full bg-amber-500' />
-                Built for subs — not for GCs
+                Built for subs, not for GCs
               </p>
 
               <h1 className='mt-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl'>
@@ -267,7 +267,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Hero visual — illustrative dashboard mock (sample data, honestly labeled) */}
+            {/* Hero visual: illustrative dashboard mock (sample data, honestly labeled) */}
             <div className='sc-fade-up sc-delay-2 relative mx-auto w-full max-w-lg'>
               <div aria-hidden='true' className='absolute -inset-6 rounded-3xl bg-gradient-to-tr from-blue-600/20 via-amber-400/20 to-emerald-500/20 blur-2xl' />
               <div className='relative rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-gray-800 dark:bg-gray-900'>
@@ -301,7 +301,7 @@ export default function HomePage() {
                 <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth={2} className='h-4 w-4 text-emerald-600' aria-hidden='true'>
                   <path strokeLinecap='round' strokeLinejoin='round' d='M4.5 12.75l6 6 9-13.5' />
                 </svg>
-                Broker request drafted — ready to send
+                Broker request drafted · ready to send
               </div>
               <p className='sr-only'>
                 Illustration of the SubCompliance dashboard showing three general contractor relationships with tracked documents, expiration countdowns, and reminder status. Sample data for demonstration.
@@ -314,7 +314,7 @@ export default function HomePage() {
         <section aria-label='Who SubCompliance is built for' className='border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-900/50'>
           <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8'>
             <p className='text-center text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-400'>
-              Built for every trade that answers to a general contractor — 3M+ subs in the US
+              Built for every trade that answers to a general contractor: 3M+ subs in the US
             </p>
             <div className='mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-3'>
               {TRADES.map((trade) => (
@@ -464,7 +464,7 @@ export default function HomePage() {
                 Your next expiration date is already on the calendar.
               </h2>
               <p className='relative mx-auto mt-4 max-w-2xl text-lg text-blue-100'>
-                Working under five GCs can mean a dozen renewal deadlines a year — and any one of them can pull you off a job. Get ahead of every deadline in the next few minutes.
+                Working under five GCs can mean a dozen renewal deadlines a year, and any one of them can pull you off a job. Get ahead of every deadline in the next few minutes.
               </p>
               <div className='relative mt-8'>
                 <Link
