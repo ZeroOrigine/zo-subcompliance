@@ -1,9 +1,9 @@
-// CANONICAL: SubCompliance pricing tiers — single source of truth for plan names,
+// CANONICAL: SubCompliance pricing tiers: single source of truth for plan names,
 // prices, and copy across all marketing pages. SELF-VALIDATION FIX: this section
-// previously advertised a $29 Pro, a $99 Enterprise, and annual billing — none of
+// previously advertised a $29 Pro, a $99 Enterprise, and annual billing; none of
 // which exist. It now mirrors the subcompliance_plans seed exactly: Free ($0, up to
 // 3 GCs) and Pro ($9/mo, unlimited GCs), monthly billing only. No fabricated tiers.
-// Server Component — no client state needed.
+// Server Component: no client state needed.
 import Link from 'next/link'
 
 interface Plan {
@@ -33,7 +33,7 @@ const PLANS: Plan[] = [
       'Track up to 3 GC relationships',
       'Unlimited documents per GC',
       'Expiration dashboard',
-      'Lapse reminders 30, 14, 7 & 1 day out — customizable',
+      'Lapse reminders 30, 14, 7 & 1 day out, customizable',
       'Broker request drafts',
     ],
     footnote: 'Free forever. No credit card required.',
@@ -44,18 +44,18 @@ const PLANS: Plan[] = [
     tagline: 'For subs juggling a full slate of GCs.',
     price: '$9',
     priceNote: 'Billed monthly',
-    cta: 'Get Pro — $9/mo',
+    cta: 'Get Pro · $9/mo',
     href: '/signup?plan=pro',
     highlight: true,
     features: [
       'Unlimited GC relationships',
-      'Everything in Free — without the 3-GC cap',
+      'Everything in Free, without the 3-GC cap',
       'Unlimited documents per GC',
       'Expiration dashboard & lapse reminders',
       'Broker request drafts',
       'Priority email support',
     ],
-    footnote: 'Cancel anytime — no lock-in.',
+    footnote: 'Cancel anytime. No lock-in.',
   },
 ]
 
@@ -68,7 +68,7 @@ export default function PricingSection({ hideHeading = false }: { hideHeading?: 
             <p className='text-sm font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400'>Pricing</p>
             <h2 className='mt-2 text-3xl font-bold tracking-tight sm:text-4xl'>Free until your GC list outgrows it</h2>
             <p className='mt-4 text-lg text-gray-600 dark:text-gray-300'>
-              Three GCs tracked free, forever — with the full reminder system. Upgrade only when you take on more.
+              Three GCs tracked free, forever, with the full reminder system. Upgrade only when you take on more.
             </p>
           </div>
         )}
@@ -134,7 +134,7 @@ export default function PricingSection({ hideHeading = false }: { hideHeading?: 
         </div>
 
         <p className='mx-auto mt-10 max-w-2xl text-center text-sm text-gray-500 dark:text-gray-400'>
-          Every plan keeps the core promise: you’ll know before anything lapses — with time to fix it. Prices in USD, billed monthly, cancel anytime.
+          Every plan keeps the core promise: you’ll know before anything lapses, with time to fix it. Prices in USD, billed monthly, cancel anytime.
         </p>
       </div>
     </section>
