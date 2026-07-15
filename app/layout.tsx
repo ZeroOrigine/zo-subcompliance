@@ -1,4 +1,4 @@
-// CANONICAL — Root layout for SubCompliance: fonts, global styles, metadata.
+// CANONICAL: Root layout for SubCompliance: fonts, global styles, metadata.
 // Owns the html/body shell only. Page chrome lives with each page's owner.
 import type { Metadata, Viewport } from 'next'
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
@@ -25,8 +25,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'SubCompliance — Never lose a job over a lapsed certificate',
-    template: '%s — SubCompliance',
+    default: 'SubCompliance | Never lose a job over a lapsed certificate',
+    template: '%s | SubCompliance',
   },
   description:
     'SubCompliance tracks the certificates of insurance and compliance documents every general contractor requires from you, warns you before anything lapses, and drafts the broker request that keeps you on the job.',
