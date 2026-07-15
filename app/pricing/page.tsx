@@ -1,4 +1,4 @@
-// CANONICAL: SubCompliance pricing page — single source of truth for the /pricing route.
+// CANONICAL: SubCompliance pricing page: single source of truth for the /pricing route.
 // SELF-VALIDATION FIX: metadata and FAQs previously referenced $29/$99 tiers and annual
 // billing that don't exist. Now aligned with the real plans: Free and Pro ($9/mo).
 import type { Metadata } from 'next'
@@ -8,12 +8,12 @@ import PricingSection from '@/components/marketing/pricing-section'
 import SiteFooter from '@/components/marketing/site-footer'
 
 export const metadata: Metadata = {
-  title: 'Pricing — SubCompliance',
+  title: 'Pricing | SubCompliance',
   description:
     'Start free with 3 GC relationships, unlimited documents, and full expiration reminders. Upgrade to Pro ($9/mo) for unlimited GCs when your list grows. No credit card required to start.',
   alternates: { canonical: '/pricing' },
   openGraph: {
-    title: 'SubCompliance Pricing — Free and Pro',
+    title: 'SubCompliance Pricing | Free and Pro',
     description:
       'A genuinely useful free plan for subs with up to 3 GCs. Pro at $9/mo for unlimited GC relationships. Cancel anytime.',
     url: '/pricing',
@@ -26,17 +26,17 @@ const BILLING_FAQS = [
   {
     question: 'Is the Free plan a trial?',
     answer:
-      'No — it never expires. Free includes 3 GC relationships, unlimited documents and expiration dates, and the full reminder system (30, 14, 7, and 1 day out by default — customizable). We don’t do time-boxed trials: the Free plan is the trial, and it lasts forever. Upgrade only when you need more.',
+      'No. It never expires. Free includes 3 GC relationships, unlimited documents and expiration dates, and the full reminder system (30, 14, 7, and 1 day out by default, customizable). We don’t do time-boxed trials: the Free plan is the trial, and it lasts forever. Upgrade only when you need more.',
   },
   {
     question: 'What happens if I outgrow Free?',
     answer:
-      'When you add a fourth active GC, we’ll ask you to upgrade to Pro ($9/mo). Nothing is deleted — your documents and reminders for the GCs you already track stay exactly as they are, and archiving a GC you no longer work with frees the slot.',
+      'When you add a fourth active GC, we’ll ask you to upgrade to Pro ($9/mo). Nothing is deleted: your documents and reminders for the GCs you already track stay exactly as they are, and archiving a GC you no longer work with frees the slot.',
   },
   {
     question: 'Can I cancel anytime?',
     answer:
-      'Yes. Manage or cancel your Pro subscription from the billing page whenever you like — you drop back to Free at the end of the period. Your data stays yours either way.',
+      'Yes. Manage or cancel your Pro subscription from the billing page whenever you like; you drop back to Free at the end of the period. Your data stays yours either way.',
   },
   {
     question: 'What payment methods do you accept?',
@@ -55,7 +55,7 @@ export default function PricingPage() {
           <p className='text-sm font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400'>Pricing</p>
           <h1 className='mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl'>Pricing that respects a sub’s margins</h1>
           <p className='mt-4 text-lg text-gray-600 dark:text-gray-300'>
-            The Free plan is genuinely useful — 3 GCs, unlimited documents, full reminders, forever. Pro is $9/mo when your GC list outgrows it.
+            The Free plan is genuinely useful: 3 GCs, unlimited documents, full reminders, forever. Pro is $9/mo when your GC list outgrows it.
           </p>
         </section>
 
