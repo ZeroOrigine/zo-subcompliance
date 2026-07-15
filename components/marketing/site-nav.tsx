@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: 'How it works', href: '/#how-it-works' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'FAQ', href: '/#faq' },
+  { label: 'About', href: '/about' },
 ]
 
 export default function SiteNav() {
