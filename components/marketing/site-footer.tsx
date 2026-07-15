@@ -1,4 +1,4 @@
-// CANONICAL: SubCompliance marketing footer — the shared footer for all marketing pages.
+// CANONICAL: SubCompliance marketing footer: the shared footer for all marketing pages.
 import Link from 'next/link'
 
 const PRODUCT_LINKS = [
@@ -36,7 +36,7 @@ export default function SiteFooter() {
               </span>
             </div>
             <p className='mt-3 text-sm leading-6 text-gray-600 dark:text-gray-400'>
-              Compliance tracking built for the contractor being tracked — not the GC doing the tracking.
+              Compliance tracking built for the contractor being tracked, not the GC doing the tracking.
             </p>
           </div>
 
