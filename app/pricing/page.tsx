@@ -8,7 +8,7 @@ import PricingSection from '@/components/marketing/pricing-section'
 import SiteFooter from '@/components/marketing/site-footer'
 
 export const metadata: Metadata = {
-  title: 'Pricing | SubCompliance',
+  title: 'Pricing',
   description:
     'Start free with 3 GC relationships, unlimited documents, and full expiration reminders. Upgrade to Pro ($9/mo) for unlimited GCs when your list grows. No credit card required to start.',
   alternates: { canonical: '/pricing' },
