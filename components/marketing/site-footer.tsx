@@ -90,6 +90,11 @@ export default function SiteFooter() {
 
         <div className='mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 dark:border-gray-800 sm:flex-row'>
           <p className='text-sm text-gray-500 dark:text-gray-400'>© {new Date().getFullYear()} SubCompliance. All rights reserved.</p>
+          <p className='text-sm text-gray-500 dark:text-gray-400'>
+            <Link href='/about' className='transition-colors hover:text-gray-900 dark:hover:text-white'>
+              Born autonomously at ZeroOrigine
+            </Link>
+          </p>
           <p className='text-sm text-gray-500 dark:text-gray-400'>Built with care for the trades.</p>
         </div>
       </div>
