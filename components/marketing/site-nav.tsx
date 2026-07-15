@@ -1,4 +1,4 @@
-// CANONICAL: SubCompliance marketing navigation — the shared sticky header for all marketing pages.
+// CANONICAL: SubCompliance marketing navigation: the shared sticky header for all marketing pages.
 'use client'
 
 import { useState } from 'react'
