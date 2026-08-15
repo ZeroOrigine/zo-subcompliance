@@ -1,5 +1,5 @@
 // CANONICAL — Shared auth-flow icons (deterministic lint #75: Spinner was defined 4×,
-// Google/GitHub/Eye icons 2× each). Pure presentational SVGs — safe to import from
+// Google/Eye icons). Pure presentational SVGs — safe to import from
 // any client component. Single definitions live here.
 
 export function Spinner() {
@@ -22,13 +22,6 @@ export function GoogleIcon() {
   )
 }
 
-export function GitHubIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
-      <path fillRule="evenodd" clipRule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0C17.3 4.66 18.3 5 18.3 5c.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0Z" />
-    </svg>
-  )
-}
 
 export function EyeIcon({ open }: { open: boolean }) {
   return (

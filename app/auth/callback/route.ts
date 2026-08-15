@@ -1,4 +1,4 @@
-// CANONICAL: GET /auth/callback — session establishment for OAuth (Google/GitHub) and
+// CANONICAL: GET /auth/callback — session establishment for OAuth (Google) and
 // PKCE email links (signup confirmation, password recovery). Tolerant of both formats:
 //   ?code=…                        → exchangeCodeForSession (OAuth + PKCE links)
 //   ?token_hash=…&type=…           → verifyOtp (custom Supabase email templates)

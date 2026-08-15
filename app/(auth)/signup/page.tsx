@@ -8,9 +8,9 @@ import { useEffect, useState, type FormEvent } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
-import { EyeIcon, GitHubIcon, GoogleIcon, Spinner } from '@/components/auth/icons'
+import { EyeIcon, GoogleIcon, Spinner } from '@/components/auth/icons'
 
-type OAuthProvider = 'google' | 'github'
+type OAuthProvider = 'google'
 
 const NOT_CONFIGURED_MESSAGE =
   "SubCompliance isn't connected to its account service yet, so we can't do that right now. If you're the site owner, add the Supabase environment variables and redeploy."
@@ -144,7 +144,7 @@ export default function SignupPage() {
     if (oauthError) {
       setOauthLoading(null)
       setError(
-        `We couldn't start ${provider === 'google' ? 'Google' : 'GitHub'} sign-up. Try again, or use your email below.`
+        `We couldn't start Google sign-up. Try again, or use your email below.`
       )
     }
   }
@@ -251,7 +251,7 @@ export default function SignupPage() {
         </div>
       )}
 
-      <div className="mt-5 grid grid-cols-2 gap-3">
+      <div className="mt-5 grid grid-cols-1 gap-3">
         <button
           type="button"
           onClick={() => handleOAuth('google')}
@@ -260,15 +260,6 @@ export default function SignupPage() {
         >
           {oauthLoading === 'google' ? <Spinner /> : <GoogleIcon />}
           Google
-        </button>
-        <button
-          type="button"
-          onClick={() => handleOAuth('github')}
-          disabled={busy}
-          className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          {oauthLoading === 'github' ? <Spinner /> : <GitHubIcon />}
-          GitHub
         </button>
       </div>
 

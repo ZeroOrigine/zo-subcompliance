@@ -1,4 +1,4 @@
-// CANONICAL: /login — email/password + Google/GitHub sign-in for SubCompliance.
+// CANONICAL: /login — email/password + Google sign-in for SubCompliance.
 // Icons come from the shared components/auth/icons (lint #75 — single definitions).
 'use client'
 
@@ -6,9 +6,9 @@ import { Suspense, useState, type FormEvent } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
-import { EyeIcon, GitHubIcon, GoogleIcon, Spinner } from '@/components/auth/icons'
+import { EyeIcon, GoogleIcon, Spinner } from '@/components/auth/icons'
 
-type OAuthProvider = 'google' | 'github'
+type OAuthProvider = 'google'
 
 // QA-025: keep this constant and guard in lockstep with app/(auth)/signup/page.tsx
 // (canonical NOT_CONFIGURED_MESSAGE) so every auth page fails soft the same way when
@@ -49,7 +49,7 @@ function LoginSkeleton() {
     <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60">
       <div className="h-7 w-44 animate-pulse rounded bg-slate-200" />
       <div className="mt-3 h-4 w-64 animate-pulse rounded bg-slate-100" />
-      <div className="mt-6 grid grid-cols-2 gap-3">
+      <div className="mt-6 grid grid-cols-1 gap-3">
         <div className="h-10 animate-pulse rounded-lg bg-slate-100" />
         <div className="h-10 animate-pulse rounded-lg bg-slate-100" />
       </div>
@@ -131,7 +131,7 @@ function LoginForm() {
     if (oauthError) {
       setOauthLoading(null)
       setError(
-        `We couldn't start ${provider === 'google' ? 'Google' : 'GitHub'} sign-in. Try again, or use your email below.`
+        `We couldn't start Google sign-in. Try again, or use your email below.`
       )
     }
     // On success the browser navigates to the provider — nothing else to do here.
@@ -153,7 +153,7 @@ function LoginForm() {
         </div>
       )}
 
-      <div className="mt-6 grid grid-cols-2 gap-3">
+      <div className="mt-6 grid grid-cols-1 gap-3">
         <button
           type="button"
           onClick={() => handleOAuth('google')}
@@ -162,15 +162,6 @@ function LoginForm() {
         >
           {oauthLoading === 'google' ? <Spinner /> : <GoogleIcon />}
           Google
-        </button>
-        <button
-          type="button"
-          onClick={() => handleOAuth('github')}
-          disabled={busy}
-          className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          {oauthLoading === 'github' ? <Spinner /> : <GitHubIcon />}
-          GitHub
         </button>
       </div>
 
