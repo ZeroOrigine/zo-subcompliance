@@ -113,7 +113,24 @@ export async function POST(request: NextRequest) {
       .maybeSingle()
     priceId = planRow?.stripe_price_id ?? null
   }
+  // #240: a missing price id is no longer a dead end — the central proxy
+  // (checkout v4) builds a real recurring Stripe price from the plan FACTS by
+  // lookup key. stripe_price_id was NULL since birth, so the 503 below fired
+  // for every user who ever clicked upgrade. Facts for Pro come from the
+  // plans row; seeded price ids still win when present.
+  let planFacts: { amount_cents: number; name: string } | null = null
   if (!priceId) {
+    const { data: factsRow } = await supabase
+      .from('subcompliance_plans')
+      .select('name, price_monthly_cents')
+      .eq('code', plan)
+      .eq('is_active', true)
+      .maybeSingle()
+    if (factsRow && Number.isInteger(factsRow.price_monthly_cents) && factsRow.price_monthly_cents >= 50) {
+      planFacts = { amount_cents: factsRow.price_monthly_cents, name: factsRow.name }
+    }
+  }
+  if (!priceId && !planFacts) {
     return NextResponse.json(
       { error: "Upgrades aren't switched on yet. Nothing was charged — check back soon." },
       { status: 503 }
@@ -141,11 +158,21 @@ export async function POST(request: NextRequest) {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${proxyToken}`,
       },
-      body: JSON.stringify({
-        product_slug: PRODUCT_SLUG,
-        price_id: priceId,
-        user_id: user.id,
-      }),
+      body: JSON.stringify(
+        priceId
+          ? { product_slug: PRODUCT_SLUG, price_id: priceId, user_id: user.id, plan_code: plan, user_email: user.email }
+          : {
+              product_slug: PRODUCT_SLUG,
+              price_id: plan,
+              plan_code: plan,
+              amount_cents: planFacts!.amount_cents,
+              currency: 'usd',
+              product_name: `SubCompliance ${planFacts!.name}`,
+              interval: 'month',
+              user_id: user.id,
+              user_email: user.email,
+            }
+      ),
       cache: 'no-store',
       signal: controller.signal,
     })
